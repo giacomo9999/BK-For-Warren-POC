@@ -130,14 +130,21 @@ h4 {
 /* On screens that are less than 700px wide, make the sidebar into a topbar and display the bar vertically, instead of horizontally */
 @media screen and (max-width: 700px) {
 
+  .logo {
+    padding: 20px;
+    width: 175px;
+  }
+
   .sidenav {
     width: 100%;
     /* height: auto; */
+    padding: 0 0 20px;
     position: relative;
+    overflow-x: visible;
   }
-  .sidenav a {
+  /* .sidenav a {
     float: left;
-  }
+  } */
   div.content {
     margin-left: 0;
   }
@@ -149,10 +156,7 @@ h4 {
     font-size: 1em;
   }
 
-  .logo {
-    padding: 20px;
-    width: 125px;
-  }
+  
 
   .container-outer {
     width: 90%;
@@ -318,4 +322,3 @@ button {
   /* background color 4 */
   background-color: #5c6a79;
 }
-
