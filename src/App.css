@@ -84,11 +84,9 @@ h4 {
   padding: 10px;
   margin: 20px auto 10px;
   /* background color 5 */
-  background-color: #BCCAD9;
+  background-color: #bccad9;
   border-radius: 5px;
 }
-
-
 
 /* Navbar */
 
@@ -130,14 +128,59 @@ h4 {
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
+/* @media screen and (max-height: 450px) {
   .sidenav {
-    padding-top: 15px;
+    padding-top: 5px;
   }
   .sidenav a {
-    font-size: 18px;
+    font-size: 1em;
+  }
+} */
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidenav a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 700px) {
+  
+  .sidenav a {
+    padding-top: 5px;
+    text-align: center;
+    float: none;
+    font-size: 1em;
+  }
+
+  .logo {
+    padding: 5px;
+    width: 125px;
+  }
+
+  .container-outer {
+    width: 90%;
+    padding: 10px;
+    margin: 20px auto 10px;
+    /* background color 5 */
+    
+  }
+
+  .main {
+    margin-left: 0; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+
+  .banner{
+    width: 90%;
   }
 }
+
 
 /* Lists: */
 
@@ -273,4 +316,9 @@ button {
 .h-form .h-btn:active {
   /* background color 4 */
   background-color: #5c6a79;
+}
+
+/* Media queries */
+
+@media (max-width: 250px) {
 }
