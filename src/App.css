@@ -127,16 +127,6 @@ h4 {
   padding: 0px 10px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-/* @media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 5px;
-  }
-  .sidenav a {
-    font-size: 1em;
-  }
-} */
-
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
   .sidenav {
@@ -144,13 +134,16 @@ h4 {
     height: auto;
     position: relative;
   }
-  .sidenav a {float: left;}
-  div.content {margin-left: 0;}
+  .sidenav a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
 }
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 @media screen and (max-width: 700px) {
-  
   .sidenav a {
     padding-top: 5px;
     text-align: center;
@@ -168,7 +161,6 @@ h4 {
     padding: 10px;
     margin: 20px auto 10px;
     /* background color 5 */
-    
   }
 
   .main {
@@ -176,11 +168,22 @@ h4 {
     padding: 0px 10px;
   }
 
-  .banner{
+  .banner {
     width: 90%;
   }
-}
 
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 1em;
+    color: #818181;
+    display: inline;
+  }
+}
 
 /* Lists: */
 
@@ -318,7 +321,3 @@ button {
   background-color: #5c6a79;
 }
 
-/* Media queries */
-
-@media (max-width: 250px) {
-}
