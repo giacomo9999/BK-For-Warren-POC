@@ -1,10 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 
-const Event = () => {
-  return <div className="container-inner">
-      <h3>Octopus-Petting Benefit At NY Aquarium</h3>
+const Event = props => {
+  return (
+    <div className="container-inner">
+      <h3>{props.eventTitle}</h3>
+      <div className="spacer5"/>
       <button>Sign Up!</button>
-  </div>
+    </div>
+  );
 };
 
 export default Event;

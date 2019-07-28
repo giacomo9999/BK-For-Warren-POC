@@ -6,7 +6,41 @@ import Banner from "./Banner";
 import Week from "./Week";
 
 class App extends Component {
+  state = {
+    eventDB: [
+      {
+        weekName: "July 15",
+        events: [
+          "Octopus-Petting Benefit At NY Aquarium",
+          "Tabling at Prospect Park Event",
+          "Happy Hour at 4th Ave Pub",
+          "Debate Party At Bob's House"
+        ]
+      },
+      {
+        weekName: "July 22",
+        events: [
+          "Happy Hour at 4th Ave Pub",
+          "Manatee-Petting Benefit At NY Aquarium",
+          "Tabling at Celebrate Brooklyn",
+          "BBQ In Some Other Park"
+        ]
+      },
+      {
+        weekName: "July 29",
+        events: [
+          "Tabling At Coney Island Fireworks",
+          "Tabling at Prospect Park Event",
+          "Happy Hour at 4th Ave Pub",
+          "Debate Party At Bob's House"
+        ]
+      }
+    ]
+  };
   render() {
+    const weekArray = this.state.eventDB.map((week, index) => (
+      <Week key={index} weekName={week.weekName} weekEvents={week.events} />
+    ));
     return (
       <div className="App">
         <div className="sidenav">
@@ -20,7 +54,7 @@ class App extends Component {
 
         <div className="main">
           <Banner />
-          <Week />
+          <div>{weekArray}</div>
         </div>
       </div>
     );

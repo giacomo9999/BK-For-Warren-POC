@@ -39,6 +39,11 @@ body {
   height: 10px;
 }
 
+.spacer5 {
+  padding: 0;
+  height: 5px;
+}
+
 h1,
 h2,
 h3,
@@ -57,7 +62,7 @@ h4 {
 }
 
 .container-outer {
-  width: 25%;
+  width: 35%;
   padding: 10px;
   margin: 20px auto 10px;
   /* background color 5 */
