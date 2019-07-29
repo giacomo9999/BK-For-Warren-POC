@@ -9,37 +9,121 @@ class App extends Component {
   state = {
     eventDB: [
       {
-        weekName: "July 15",
+        weekId: 190715,
         events: [
-          "Octopus-Petting Benefit At NY Aquarium",
-          "Tabling at Prospect Park Event",
-          "Happy Hour at 4th Ave Pub",
-          "Debate Party At Bob's House"
+          {
+            eventId: 100,
+            eventDate: 190716,
+            eventName: "Octopus-Petting Benefit At NY Aquarium",
+            eventDescription:
+              "Greeking is a style of displaying or rendering text or symbols, not always from the Greek alphabet. Greeking obscures portions of a work for the purpose of either emphasizing form over details or displaying placeholders for unavailable content.",
+            attendees: []
+          },
+          {
+            eventId: 101,
+            eventDate: 190718,
+            eventName: "Tabling at Prospect Park Event",
+            eventDescription:
+              "Greeking is a style of displaying or rendering text or symbols, not always from the Greek alphabet. Greeking obscures portions of a work for the purpose of either emphasizing form over details or displaying placeholders for unavailable content.",
+            attendees: []
+          },
+          {
+            eventId: 102,
+            eventDate: 190719,
+            eventName: "Happy Hour at 4th Ave Pub",
+            eventDescription:
+              "Greeking is a style of displaying or rendering text or symbols, not always from the Greek alphabet. Greeking obscures portions of a work for the purpose of either emphasizing form over details or displaying placeholders for unavailable content.",
+            attendees: []
+          },
+          {
+            eventId: 103,
+            eventDate: 190719,
+            eventName: "Debate Party At Bob's House",
+            eventDescription:
+              "Greeking is a style of displaying or rendering text or symbols, not always from the Greek alphabet. Greeking obscures portions of a work for the purpose of either emphasizing form over details or displaying placeholders for unavailable content.",
+            attendees: []
+          }
         ]
       },
       {
-        weekName: "July 22",
+        weekId: 190722,
         events: [
-          "Happy Hour at 4th Ave Pub",
-          "Manatee-Petting Benefit At NY Aquarium",
-          "Tabling at Celebrate Brooklyn",
-          "BBQ In Some Other Park"
+          {
+            eventId: 100,
+            eventDate: 190716,
+            eventName: "Happy Hour at 4th Ave Pub",
+            eventDescription:
+              "Greeking is a style of displaying or rendering text or symbols, not always from the Greek alphabet. Greeking obscures portions of a work for the purpose of either emphasizing form over details or displaying placeholders for unavailable content.",
+            attendees: []
+          },
+          {
+            eventId: 101,
+            eventDate: 190718,
+            eventName: "Manatee-Petting Benefit At NY Aquarium",
+            eventDescription:
+              "Greeking is a style of displaying or rendering text or symbols, not always from the Greek alphabet. Greeking obscures portions of a work for the purpose of either emphasizing form over details or displaying placeholders for unavailable content.",
+            attendees: []
+          },
+          {
+            eventId: 102,
+            eventDate: 190719,
+            eventName: "Tabling at Celebrate Brooklyn",
+            eventDescription:
+              "Greeking is a style of displaying or rendering text or symbols, not always from the Greek alphabet. Greeking obscures portions of a work for the purpose of either emphasizing form over details or displaying placeholders for unavailable content.",
+            attendees: []
+          },
+          {
+            eventId: 103,
+            eventDate: 190719,
+            eventName: "BBQ In Some Other Park",
+            eventDescription:
+              "Greeking is a style of displaying or rendering text or symbols, not always from the Greek alphabet. Greeking obscures portions of a work for the purpose of either emphasizing form over details or displaying placeholders for unavailable content.",
+            attendees: []
+          }
         ]
       },
       {
-        weekName: "July 29",
+        weekId: 190729,
         events: [
-          "Tabling At Coney Island Fireworks",
-          "Tabling at Prospect Park Event",
-          "Happy Hour at 4th Ave Pub",
-          "Debate Party At Bob's House"
+          {
+            eventId: 100,
+            eventDate: 190716,
+            eventName: "Tabling At Coney Island Fireworks",
+            eventDescription:
+              "Greeking is a style of displaying or rendering text or symbols, not always from the Greek alphabet. Greeking obscures portions of a work for the purpose of either emphasizing form over details or displaying placeholders for unavailable content.",
+            attendees: []
+          },
+          {
+            eventId: 101,
+            eventDate: 190718,
+            eventName: "Tabling at Prospect Park Event",
+            eventDescription:
+              "Greeking is a style of displaying or rendering text or symbols, not always from the Greek alphabet. Greeking obscures portions of a work for the purpose of either emphasizing form over details or displaying placeholders for unavailable content.",
+            attendees: []
+          },
+          {
+            eventId: 102,
+            eventDate: 190719,
+            eventName: "Happy Hour at 4th Ave Pub",
+            eventDescription:
+              "Greeking is a style of displaying or rendering text or symbols, not always from the Greek alphabet. Greeking obscures portions of a work for the purpose of either emphasizing form over details or displaying placeholders for unavailable content.",
+            attendees: []
+          },
+          {
+            eventId: 103,
+            eventDate: 190719,
+            eventName: "Debate Party At Bob's House",
+            eventDescription:
+              "Greeking is a style of displaying or rendering text or symbols, not always from the Greek alphabet. Greeking obscures portions of a work for the purpose of either emphasizing form over details or displaying placeholders for unavailable content.",
+            attendees: []
+          }
         ]
       }
     ]
   };
   render() {
     const weekArray = this.state.eventDB.map((week, index) => (
-      <Week key={index} weekName={week.weekName} weekEvents={week.events} />
+      <Week key={index} weekId={week.weekId} weekEvents={week.events} />
     ));
     return (
       <div className="App">
