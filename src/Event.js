@@ -12,12 +12,13 @@ class Event extends Component {
       <div className="container-inner">
         <h2>{`${this.props.eventDate}  • ${this.props.eventName}`}</h2>
         <p>{this.props.eventDescription}</p>
-        <div className="spacer10" />
         <div>
           {this.state.userGoing ? (
             <div>
-              <button>You're Going!</button>
-              <button onClick={this.toggleUserGoing}>Cancel</button>
+              <div className="youreGoing">You're Going!</div>
+              <button className="green" onClick={this.toggleUserGoing}>
+                Cancel
+              </button>
               <button>Add To Google Calendar</button>
             </div>
           ) : (
